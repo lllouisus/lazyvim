@@ -49,16 +49,6 @@ G.p.backup = false
 G.p.swapfile = false
 G.p.wrap = false    -- No wrap lines
 
--- Copy Color
-vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
-        vim.highlight.on_yank {
-            higroup = "Search",
-            timeout = 200
-        }
-    end
-})
-
 vim.cmd [[
 augroup remenber _folds
 autocmd!
@@ -66,12 +56,6 @@ autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent! loadview
 augroup END
 ]]
-
---  Cursor Location
-G.cmd([[
-set undofile
-set undodir=~/.config/nvim/cache/undodir
-]])
 
 --  Save History
 G.p.viminfo = '!,\'10000,<50,s10,h'

@@ -1,5 +1,6 @@
 local M = {
     "jose-elias-alvarez/null-ls.nvim",
+    event = "BufRead",
     dependencies = {
         "neovim/nvim-lspconfig",
         "jay-babu/mason-null-ls.nvim",

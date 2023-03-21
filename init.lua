@@ -146,6 +146,7 @@ vim.api.nvim_create_autocmd("User", {
  pattern = "VeryLazy",
  callback = function()
   require("base.keybinds")
+  require("base.autocmd")
  end,
 })
 
