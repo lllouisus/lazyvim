@@ -1,6 +1,6 @@
 highlight clear 
 if exists("syntax_on") 
- syntax reset 
+  syntax reset 
 endif
 
 " ------------------------------------------
@@ -8,7 +8,7 @@ endif
 " Cmp colors & Lsp ------ ------ ------ ------ ------
 hi CmpItemKind guifg=#719e07 guibg=NONE gui=NONE
 hi CmpItemMenu guifg=NONE guibg=bg gui=NONE
-hi CmpItemKindText guifg=#719e07 guibg=NONE gui=NONE
+hi CmpItemKindText guifg=#ffffff guibg=NONE gui=NONE
 hi CmpItemKindMethod guifg=#719e07 guibg=NONE gui=NONE
 hi CmpItemKindFunction guifg=#268bd2 guibg=NONE gui=NONE
 hi CmpItemKindConstructor guifg=#cb4b16 guibg=NONE gui=NONE
@@ -295,3 +295,4 @@ hi GitGutterAdd    guifg=#719e07
 hi GitGutterChange guifg=#b58900
 hi GitGutterDelete guifg=#dc322f
 hi GitGutterChangeDelete guifg=#dc322f
+

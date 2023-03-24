@@ -1,10 +1,13 @@
-local M = {
-    "ur4ltz/surround.nvim",
-    event = "BufRead"
+return {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
 }
 
-function M.config()
-    require("surround").setup({ mappings_style = "surround" })
-end
 
-return M

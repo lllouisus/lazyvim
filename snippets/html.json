@@ -1,0 +1,25 @@
+{
+    "Print to console": {
+        "prefix": "log",
+        "body": [
+            "console.log('$1');",
+            "$2"
+        ],
+        "description": "Log output to console"
+    },
+
+    "HTML5 template": {
+        "prefix": "test",
+        "body": [
+            "<!doctype html>",
+            "<html>",
+            "	<head>",
+            "	</head>",
+            "	<body>",
+            "	</body>",
+            "</html>"
+        ],
+        "description": "Adds a html5 template"
+    }
+}
+

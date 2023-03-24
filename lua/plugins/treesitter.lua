@@ -1,33 +1,46 @@
-local M = {
-    "nvim-treesitter/nvim-treesitter",
-    build = "TSUpdate",
-    event = "VimEnter",
+return {
+    -- Highlight, edit, and navigate code
+    'nvim-treesitter/nvim-treesitter',
+    -- version = false, -- last release is way too old and doesn't work on Windows
+    build = ":TSUpdate",
+    event =  { "BufReadPost", "BufNewFile" },
     dependencies = {
-        "nvim-treesitter/playground"
-    }
+        'nvim-treesitter/nvim-treesitter-textobjects',
+    },
+    config = function()
+        require('nvim-treesitter.configs').setup {
+            ensure_installed = {
+                "c",
+                "cpp",
+                "python",
+                "markdown",
+                "markdown_inline",
+                "tsx",
+                "toml",
+                "fish",
+                "php",
+                "json",
+                "yaml",
+                "swift",
+                "css",
+                "html",
+                "lua",
+                "help",
+                "javascript",
+                "typescript",
+                "vim"
+            },
+            ignore_install = { "phpdoc" },
+            highlight = {
+                enable = true,
+                disable = { "json" }
+            },
+        }
+    end,
 }
 
-function M.config()
-    require('nvim-treesitter.configs').setup({
-        ensure_installed = {
-            "css",
-            "c",
-            "cpp",
-            "html",
-            "lua",
-            "typescript",
-            "javascript",
-            "python",
-            "json",
-        },
-        sync_install = true,
-        ignore_install = { },
-        highlight = {
-            enable = true,
-            disable = {}
-        },
-    })
 
-end
 
-return M
+
+
+

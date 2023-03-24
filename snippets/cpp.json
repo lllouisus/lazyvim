@@ -1,11 +1,13 @@
 {
     "test": {
-        "prefix": "test",
+        "prefix": "ggg",
         "body": [
-            "this is $1 a test",
+            "this is $1 a ggg",
             "    %1"
         ],
         "description": "snippets test"
     }
 }
+
+
 

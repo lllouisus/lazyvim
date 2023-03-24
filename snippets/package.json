@@ -1,7 +1,7 @@
 {
     "name": "my-snippets",
-    "contributes": {
-        "snippets": [
+        "contributes": {
+            "snippets": [
             {
                 "language": ["all"],
                 "path": "./global.json"
@@ -9,8 +9,14 @@
             {
                 "language": "cpp",
                 "path": "./cpp.json"
+            },
+            {
+                "language": "html",
+                "path": "./html.json"
             }
-        ]
-    }
+            ]
+        }
 }
+
+
 
