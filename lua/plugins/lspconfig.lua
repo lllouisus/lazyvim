@@ -96,6 +96,12 @@ config = function ()
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
+    -- 临时: 消除使用 clangd 报错警告
+    -- warning: multiple different client offset_encodings detected for buffer, this is not supported
+    local Test_capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.offsetEncoding = { "utf-16" }
+    require("lspconfig").clangd.setup({ capabilities = Test_capabilities })
+
     -- Setup mason so it can manage external tooling
     require('mason').setup()
 
