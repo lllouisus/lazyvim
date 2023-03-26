@@ -5,7 +5,7 @@ dependencies = {
     -- Automatically install LSPs to stdpath for neovim
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    { "folke/neoconf.nvim", cmd = "Neoconf", config = true },
+    'jose-elias-alvarez/null-ls.nvim',
     { "folke/neodev.nvim", opts = { experimental = { pathStrict = true } } },
 
     -- Useful status updates for LSP
@@ -39,8 +39,8 @@ config = function ()
             vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
         end
 
-        nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-        nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+        -- nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+        -- nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
         nmap('sd', vim.lsp.buf.definition, '[G]oto [D]efinition')
         -- nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
@@ -143,5 +143,6 @@ config = function ()
 
 end
 }
+
 
 
