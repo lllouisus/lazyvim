@@ -9,16 +9,19 @@ return {
   },
   config = function()
     local null_ls = require("null-ls")
+    local formatting = null_ls.builtins.formatting
+
+    local sources = {
+      formatting.eslint,
+      formatting.autopep8,
+      formatting.stylua,
+      -- formatting.spell
+    }
+
     null_ls.setup({
-      sources = {
-        null_ls.builtins.formatting.stylua,
-        -- null_ls.builtins.completion.spell,
-        null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.diagnostics.cmake_lint,
-      },
+      sources = sources
     })
-    require("null-ls.custom")
-    require("null-ls.markdownlint")
+
 
     -- keymap
     vim.keymap.set('n', '<Leader>f', ':lua vim.lsp.buf.format()<CR>', {})
