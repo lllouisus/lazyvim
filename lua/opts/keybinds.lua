@@ -69,8 +69,10 @@ local G = require"opts.G"
  { 'n', 'tt', ':NeoTreeFloat<CR>', {} },
 
  -- window move & resize
- { 'n', 'sv', ':vsplit<CR><C-w>w', { noremap = true} },
- { 'n', 'ss', ':split<CR><C-w>w', { noremap = true} },
+ -- { 'n', 'sv', ':vsplit<CR><C-w>w', { noremap = true} },
+ -- { 'n', 'ss', ':split<CR><C-w>w', { noremap = true} },
+ { 'n', 'sv', ':vsplit<CR>', { noremap = true} },
+ { 'n', 'ss', ':split<CR>', { noremap = true} },
  { 'n', 'to', ':only<CR>', { noremap = true} },
  { 'n', '<C-Left>', ':vertical resize +2<CR>', { noremap = true} },
  { 'n', '<C-Right>', ':vertical resize -2<CR>', { noremap = true} },
