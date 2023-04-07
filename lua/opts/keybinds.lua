@@ -10,7 +10,7 @@ local G = require"opts.G"
  {'i', 'ni', '<Esc>', {} },
  -- {'i', '<capslock>', '<Esc>', {} },
  {'n', 'Q', ':q<CR>', {} },
- {'n', 'T', ':qa!<CR>', {} },
+ {'n', '<Leader>q', ':qa!<CR>', {} },
  {'n', 'S', '&buftype == "acwrite" ? ":W<CR>" : ":w!<CR>"', { noremap = true, silent = true, expr = true} },
  {'n', ';', ':', {} },
  {'v', ';', ':', {} },

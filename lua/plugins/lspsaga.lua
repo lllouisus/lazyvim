@@ -24,7 +24,7 @@ return {
         -- vim.keymap.set('n', 'ff', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
         -- vim.keymap.set('n', 'FF', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
         vim.keymap.set('n', 'se', '<Cmd>Lspsaga peek_definition<CR>', opts)
-        -- vim.keymap.set('n', 'sk', '<Cmd>Lspsaga hover_doc<CR>', opts)
+        vim.keymap.set('n', 'si', '<Cmd>Lspsaga hover_doc<CR>', opts)
         -- vim.keymap.set('n', 'sh', '<Cmd>Lspsaga preview_definition<CR>', opts)
 
         -- vim.keymap.set('n', '<Leader>rn', '<Cmd>Lspsaga rename<CR>', opts)
