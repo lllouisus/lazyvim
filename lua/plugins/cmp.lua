@@ -51,8 +51,8 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ['<C-k>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),  -- previous suggestion
-        ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),  -- next suggestion
+        ['<A-i>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),  -- previous suggestion
+        ['<A-n>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),  -- next suggestion
         -- ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         -- ["<C-f>"] = cmp.mapping.scroll_docs(4),
         -- Jump to the next placeholder in the snippet.
@@ -71,7 +71,7 @@ return {
             fallback()
           end
         end, {'i', 's'}),
-        ["<C-p>"] = cmp.mapping.complete(), -- show completion suggestions
+        -- ["<C-p>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<C-q>"] = cmp.mapping.abort(),  -- close completion window
         ['<C-e>'] = cmp.mapping.confirm({
           behavior = cmp.ConfirmBehavior.Replace,

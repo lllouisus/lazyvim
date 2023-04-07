@@ -19,8 +19,8 @@ config = function ()
     -- Diagnostic keymaps
     vim.keymap.set('n', 'FF', vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
     vim.keymap.set('n', 'ff', vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
-    vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-    vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+    vim.keymap.set('n', '<leader>lso', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+    vim.keymap.set('n', '<leader>lss', vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
     -- LSP settings.
     --  This function gets run when an LSP connects to a particular buffer.
@@ -39,7 +39,7 @@ config = function ()
             vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
         end
 
-        -- nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+        nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
         -- nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
         nmap('sd', vim.lsp.buf.definition, '[G]oto [D]efinition')
@@ -50,8 +50,8 @@ config = function ()
         -- nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
         -- See `:help K` for why this keymap
-        nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-        nmap('sk', vim.lsp.buf.signature_help, 'Signature Documentation')
+        -- nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+        -- nmap('sk', vim.lsp.buf.signature_help, 'Signature Documentation')
 
         -- Lesser used LSP functionality
         -- nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')

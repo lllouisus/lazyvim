@@ -102,7 +102,7 @@ return {
                         "toggle_node",
                         nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use 
                     },
-                    ["l"] = "open",
+                    ["h"] = "open",
                     ["<esc>"] = "revert_preview",
                     ["P"] = { "toggle_preview", config = { use_float = true } },
                     ["s"] = "open_split",
@@ -114,7 +114,7 @@ return {
                     -- ["t"] = "open_tab_drop",
                     ["w"] = "open_with_window_picker",
                     --["P"] = "toggle_preview", -- enter preview mode, which shows the current node without focusing
-                    ["h"] = "close_node",
+                    ["e"] = "close_node",
                     ["O"] = "close_all_nodes",
                     ["Z"] = "expand_all_nodes",
                     ["a"] = {
@@ -143,6 +143,8 @@ return {
                     ["?"] = "show_help",
                     ["<"] = "prev_source",
                     [">"] = "next_source",
+                    -- ["e"] = "move_cursor_down",
+                    -- ["u"] = "move_cursor_up",
                 }
             },
             nesting_rules = {},
@@ -182,7 +184,7 @@ use_libuv_file_watcher = true, -- This will use the OS level file watchers to de
 -- instead of relying on nvim autocmd events.
 window = {
     mappings = {
-        ["H"] = "navigate_up",
+        ["E"] = "navigate_up",
         ["."] = "set_root",
         ["<C-h>"] = "toggle_hidden",
         ["/"] = "fuzzy_finder",
@@ -191,6 +193,8 @@ window = {
         ["<c-x>"] = "clear_filter",
         ["[g"] = "prev_git_modified",
         ["]g"] = "next_git_modified",
+        -- ["e"] = "move_cursor_down",
+        -- ["<up>"] = "move_cursor_up",
     }
 }
       },

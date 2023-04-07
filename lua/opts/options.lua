@@ -43,7 +43,7 @@ opt.wildignore:append { '*/node_modules/*' }
 
 -- Clipboard
 -- opt.clipboard = "unnamedplus" -- Sync with system clipboard
--- opt.clipboard = 'unnamed,unnamedplus'
+opt.clipboard = 'unnamed,unnamedplus'
 
 -- Search
 opt.hlsearch = true
