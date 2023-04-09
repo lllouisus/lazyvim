@@ -2,7 +2,7 @@ return {
   -- Autocompletion
   'hrsh7th/nvim-cmp',
   event = "InsertEnter",
-  dependencies = { 
+  dependencies = {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-nvim-lua',
     'onsails/lspkind.nvim',
@@ -14,7 +14,7 @@ return {
     'rafamadriz/friendly-snippets',
     {
       'L3MON4D3/LuaSnip',
-      config = function ()
+      config = function()
         require("luasnip").setup({
           region_check_events = "CursorHold,InsertLeave",
           delete_check_events = "TextChanged,InsertEnter",
@@ -51,8 +51,8 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ['<A-i>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),  -- previous suggestion
-        ['<A-n>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),  -- next suggestion
+        ['<C-o>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }), -- previous suggestion
+        ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }), -- next suggestion
         -- ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         -- ["<C-f>"] = cmp.mapping.scroll_docs(4),
         -- Jump to the next placeholder in the snippet.
@@ -62,7 +62,7 @@ return {
           else
             fallback()
           end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
         -- Jump to the previous placeholder in the snippet.
         ['<C-b>'] = cmp.mapping(function(fallback)
           if luasnip.jumpable(-1) then
@@ -70,9 +70,9 @@ return {
           else
             fallback()
           end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
         -- ["<C-p>"] = cmp.mapping.complete(), -- show completion suggestions
-        ["<C-q>"] = cmp.mapping.abort(),  -- close completion window
+        ["<C-q>"] = cmp.mapping.abort(), -- close completion window
         ['<C-e>'] = cmp.mapping.confirm({
           behavior = cmp.ConfirmBehavior.Replace,
           select = true
@@ -87,21 +87,21 @@ return {
           else
             cmp.complete()
           end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item(select_opts)
           else
             fallback()
           end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
         { name = "nvim_lsp", keyword_length = 1 }, -- lsp
-        { name = "luasnip", keyword_length = 1 }, -- snippets
-        { name = "buffer", keyword_length = 2 }, -- text within current buffer
-        { name = "path" }, -- file system paths
+        { name = "luasnip",  keyword_length = 1 }, -- snippets
+        { name = "buffer",   keyword_length = 2 }, -- text within current buffer
+        { name = "path" },                         -- file system paths
       }),
       -- configure lspkind for vs-code like icons
       formatting = {

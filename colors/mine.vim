@@ -200,7 +200,7 @@ hi Comment guibg=NONE guifg=#586e75 gui=italic
 hi Cursor guifg=#002b36  guibg=#839496 gui=NONE
 hi CursorLineNr guifg=#b58900 guibg=#000000 gui=BOLD
 " hi CursorLine guifg=NONE guibg=NONE gui=BOLD
-hi CursorLine guifg=NONE guibg=#002b36 gui=BOLD
+hi CursorLine guifg=NONE guibg=NONE gui=BOLD
 
 " String
 hi String guibg=NONE guifg=#ff8000  guibg=NONE

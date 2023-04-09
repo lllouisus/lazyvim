@@ -7,7 +7,7 @@ local G = require"opts.G"
  {'n', 's', '<NOP>', {} },
 
  --General
- {'i', 'ni', '<Esc>', {} },
+ {'i', 'no', '<Esc>', {} },
  -- {'i', '<capslock>', '<Esc>', {} },
  {'n', 'Q', ':q<CR>', {} },
  {'n', '<Leader>q', ':qa!<CR>', {} },
@@ -21,12 +21,12 @@ local G = require"opts.G"
  { 'n', '<Space><Enter>', ':nohlsearch<CR>', { noremap = true} },
 
 {'n', 'n', 'j', { noremap = true} },
-{'n', 'i', 'k', { noremap = true} },
+{'n', 'o', 'k', { noremap = true} },
 {'n', 'h', 'l', { noremap = true} },
 {'n', 'e', 'h', { noremap = true} },
 
 {'v', 'n', 'j', { noremap = true} },
-{'v', 'i', 'k', { noremap = true} },
+{'v', 'o', 'k', { noremap = true} },
 {'v', 'h', 'l', { noremap = true} },
 {'v', 'e', 'h', { noremap = true} },
 
@@ -35,19 +35,19 @@ local G = require"opts.G"
 {'v', 'E', '^', { noremap = true} },
 {'v', 'H', '$', { noremap = true} },
 
-{'v', 'N', 'J', { noremap = true} },
+-- {'v', 'N', 'J', { noremap = true} },
 
 {'n', 'N', '6j', { noremap = true} },
-{'n', 'I', '6k', { noremap = true} },
+{'n', 'O', '6k', { noremap = true} },
 
 {'v', 'N', '6j', { noremap = true} },
-{'v', 'I', '6k', { noremap = true} },
+{'v', 'O', '6k', { noremap = true} },
 
-{'n', 'l', 'i', { noremap = true} },
-{'n', 'L', 'I', { noremap = true} },
+{'n', 'k', 'o', { noremap = true} },
+{'n', 'K', 'O', { noremap = true} },
 
-{'n', 'k', 'nzz', { noremap = true} },
-{'n', 'K', 'Nzz', { noremap = true} },
+{'n', 'l', 'nzz', { noremap = true} },
+{'n', 'L', 'Nzz', { noremap = true} },
 
  {'i', '<C-e>', '<Enter>', {} },
  {'n', '<C-e>', '<Enter>', {} },
@@ -90,21 +90,21 @@ local G = require"opts.G"
  -- window move & resize
  { 'n', 'sv', ':vsplit<CR>', { noremap = true} },
  { 'n', 'ss', ':split<CR>', { noremap = true} },
- { 'n', 'to', ':only<CR>', { noremap = true} },
+ -- { 'n', 'to', ':only<CR>', { noremap = true} },
  -- { 'n', '<C-Left>', ':vertical resize +2<CR>', { noremap = true} },
  -- { 'n', '<C-Right>', ':vertical resize -2<CR>', { noremap = true} },
 
  { 'n', 'te', '<C-w>h', { noremap = true} },
  { 'n', 'th', '<C-w>l', { noremap = true} },
  { 'n', 'tn', '<C-w>j', { noremap = true} },
- { 'n', 'ti', '<C-w>k', { noremap = true} },
+ { 'n', 'to', '<C-w>k', { noremap = true} },
 
  -- buffers
  -- { 'n', 'sn', ':tabedit<CR>', { noremap = true, silent = true} },
 
  { 'n', '<Leader>d', ':bd!<CR>', { noremap = true, silent = true} },
- -- { 'n', '<C-e>', ':bp<CR>', { noremap = true, silent = true} },
- -- { 'n', '<C-u>', ':bp<CR>', { noremap = true, silent = true} },
+ { 'n', '<Leader>o', ':bp<CR>', { noremap = true, silent = true} },
+ { 'n', '<Leader>n', ':bn<CR>', { noremap = true, silent = true} },
  -- { 'i', '<C-e>', ':bp<CR>', { noremap = true, silent = true} },
  -- { 'i', '<C-u>', ':bp<CR>', { noremap = true, silent = true} },
 

@@ -22,7 +22,7 @@ return {
             on_create = function()
               vim.api.nvim_buf_set_keymap(0, 't', '<C-n>', '<DOWN>',
               {nowait = true, noremap = true})
-              vim.api.nvim_buf_set_keymap(0, 't', '<C-i>', '<UP>',
+              vim.api.nvim_buf_set_keymap(0, 't', '<C-o>', '<UP>',
               {nowait = true, noremap = true})
               vim.api.nvim_buf_set_keymap(0, 't', '<C-e>', '<Enter>',
               {nowait = true, noremap = true})

@@ -1,4 +1,5 @@
 vim.cmd.colorscheme "mine"
+-- vim.cmd.colorscheme "mine2"
 
 vim.cmd("autocmd!")
 
@@ -7,7 +8,22 @@ vim.g.maplocalleader = " "
 
 local opt = vim.opt
 
-vim.cmd.colorscheme "mine"
+-- fix for yankring and neovim clipboard error target string not available
+vim.cmd([[
+let g:clipboard = {
+      \   'name': 'xsel_override',
+      \   'copy': {
+      \      '+': 'xsel --input --clipboard',
+      \      '*': 'xsel --input --primary',
+      \    },
+      \   'paste': {
+      \      '+': 'xsel --output --clipboard',
+      \      '*': 'xsel --output --primary',
+      \   },
+      \   'cache_enabled': 1,
+      \ }
+]])
+
 
 -- UTF-8
 vim.scriptencoding = 'utf-8'
@@ -43,7 +59,7 @@ opt.wildignore:append { '*/node_modules/*' }
 
 -- Clipboard
 -- opt.clipboard = "unnamedplus" -- Sync with system clipboard
-opt.clipboard = 'unnamed,unnamedplus'
+-- opt.clipboard = 'unnamed,unnamedplus'
 
 -- Search
 opt.hlsearch = true
@@ -74,7 +90,7 @@ opt.foldtext = 'v:lua.MagicFoldText()'
 opt.updatetime = 250 -- Save swap file and trigger CursorHold
 opt.shortmess:append { W = true, I = true, c = true }
 
-opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
+opt.signcolumn = "auto" -- Always show the signcolumn, otherwise it would shift the text each time
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }
