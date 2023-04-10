@@ -1,5 +1,4 @@
 vim.cmd.colorscheme "mine"
--- vim.cmd.colorscheme "mine2"
 
 vim.cmd("autocmd!")
 
@@ -74,7 +73,7 @@ opt.completeopt = "menu,menuone,noselect"
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
 
-opt.mouse = "n" -- Enable mouse mode
+opt.mouse = "" -- Enable mouse mode
 
 opt.vb = true
 opt.hidden = true
@@ -90,7 +89,7 @@ opt.foldtext = 'v:lua.MagicFoldText()'
 opt.updatetime = 250 -- Save swap file and trigger CursorHold
 opt.shortmess:append { W = true, I = true, c = true }
 
-opt.signcolumn = "auto" -- Always show the signcolumn, otherwise it would shift the text each time
+-- opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }

@@ -1,7 +1,5 @@
 local G = require"opts.G"
 
--- local G = require"opts.G"
-
  -- Nop Map
  G.map({
  {'n', 's', '<NOP>', {} },
@@ -100,8 +98,7 @@ local G = require"opts.G"
  { 'n', 'to', '<C-w>k', { noremap = true} },
 
  -- buffers
- -- { 'n', 'sn', ':tabedit<CR>', { noremap = true, silent = true} },
-
+ { 'n', '<Leader>e', ':tabedit ', { noremap = true, silent = true} },
  { 'n', '<Leader>d', ':bd!<CR>', { noremap = true, silent = true} },
  { 'n', '<Leader>o', ':bp<CR>', { noremap = true, silent = true} },
  { 'n', '<Leader>n', ':bn<CR>', { noremap = true, silent = true} },

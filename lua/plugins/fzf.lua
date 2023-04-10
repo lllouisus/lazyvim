@@ -34,7 +34,8 @@ return {
               -- instead of the default action 'actions.file_edit_or_qf'
               -- it's important to define all other actions here as this
               -- table does not get merged with the global defaults
-              ["default"]       = actions.file_edit,
+              -- ["default"]       = actions.file_edit,
+              ["default"]       = actions.file_tabedit,
               ["ctrl-s"]        = actions.file_split,
               ["ctrl-v"]        = actions.file_vsplit,
               ["ctrl-t"]        = actions.file_tabedit,
