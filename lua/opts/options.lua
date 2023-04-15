@@ -31,7 +31,7 @@ vim.opt.fileencoding = 'utf-8'
 
 opt.number = true -- Print line number
 opt.numberwidth = 2
-opt.relativenumber = true -- Relative line numbers
+-- opt.relativenumber = true -- Relative line numbers
 opt.title = true
 opt.autoindent = true
 opt.smartindent = true -- Insert indents automatically
