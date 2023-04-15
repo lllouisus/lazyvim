@@ -11,4 +11,3 @@ require "opts.options"
 require "opts.keybinds"
 require "opts.autocmds"
 require("lazy").setup("plugins")
-
