@@ -1,0 +1,29 @@
+
+*** These modified files were found in JOE when it aborted on Sun Apr 16 16:56:40 2023
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+init.lua
+
+*** File 'init.lua'
+        local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+seaseif not vim.loop.fs_stat(lazypath) then
+  -- bootstrap lazy.nvim
+  -- stylua: ignore
+  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+end
+
+vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+
+re[BVquire "opts.options"
+require "opts.keybinds"
+require "opts.autocmds"
+[Arequire("lazy").setup("plugins")
+
+*** File '* Startup Log *'
+Couldn't load termcap entry.  Using ansi default
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc
